@@ -66,5 +66,17 @@ http://www.springframework.org/schema/p ">
         </property>
     </bean>
 
+<!--    this is reference of bean-->
+
+    <bean class="com.example.springcore.app3.Banana" name="bClass">
+        <property name="x" value="78"/>
+        <property name="y" value="90"/>
+    </bean>
+
+    <bean class="com.example.springcore.app3.Apple" name="aClass">
+        <property name="xA" value="12"/>
+        <property name="banana" ref="bClass"/>
+    </bean>
+
 
 </beans>
