@@ -9,5 +9,8 @@ public class MainApp {
         ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
         Student student1 = (Student) context.getBean("studentInfo");
         System.out.println(student1);
+
+        Student student2 =(Student) context.getBean("studentInfoSecond");
+        System.out.println(student2);
     }
 }
