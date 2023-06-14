@@ -14,5 +14,9 @@ public class MainApp {
         // use AbstractApplicationContext for calling destroy()
         context.registerShutdownHook();
 
+        System.out.println("_________________________________________");
+        Somosa somosa = (Somosa) context.getBean("somosaInfo");
+        System.out.println(somosa);
+
     }
 }

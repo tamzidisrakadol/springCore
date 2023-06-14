@@ -24,23 +24,24 @@ http://www.springframework.org/schema/p ">
         </property>
     </bean>
 
-<!--    setting value by p Schema-->
-    <bean class="com.example.springcore.app1.Student" name="studentInfoSecond" p:studentID="4528" p:studentName="GAbbar" p:studentaddress="Dillalpur"/>
+    <!--    setting value by p Schema-->
+    <bean class="com.example.springcore.app1.Student" name="studentInfoSecond" p:studentID="4528" p:studentName="GAbbar"
+          p:studentaddress="Dillalpur"/>
 
-<!--this is list of bean-->
+    <!--this is list of bean-->
     <bean class="com.example.springcore.app2.Employee" name="employeeInfo">
         <property name="name" value="ROHAN"/>
         <property name="phonelist">
-           <list>
-               <value>4984312349</value>
-               <value>4984312349</value>
-               <value>4984312348</value>
-               <value>4984312347</value>
-               <value>4984312346</value>
-               <value>4984312345</value>
-               <value>4984312344</value>
-               <value>4984312343</value>
-           </list>
+            <list>
+                <value>4984312349</value>
+                <value>4984312349</value>
+                <value>4984312348</value>
+                <value>4984312347</value>
+                <value>4984312346</value>
+                <value>4984312345</value>
+                <value>4984312344</value>
+                <value>4984312343</value>
+            </list>
         </property>
 
         <property name="addressSet">
@@ -62,11 +63,11 @@ http://www.springframework.org/schema/p ">
                 <entry key="Database Section" value="25"/>
                 <entry key="Testing Section" value="7"/>
             </map>
-            
+
         </property>
     </bean>
 
-<!--    this is reference of bean-->
+    <!--    this is reference of bean-->
 
     <bean class="com.example.springcore.app3.Banana" name="bClass">
         <property name="x" value="78"/>
@@ -78,7 +79,7 @@ http://www.springframework.org/schema/p ">
         <property name="banana" ref="bClass"/>
     </bean>
 
-<!--    this is constructor injection-->
+    <!--    this is constructor injection-->
 
     <bean class="com.example.springcore.app3.FruiteSeller" name="sellerInfo">
         <constructor-arg value="Sanjib Akram"/>
@@ -87,11 +88,15 @@ http://www.springframework.org/schema/p ">
     </bean>
 
 
-<!--    this is bean life-cycle-->
+    <!--    this is bean life-cycle-->
 
-    <bean class="com.example.springcore.app4.TeacherModel" name="teacherInfo" init-method="init" destroy-method="destroy">
-        <property name="teacherName" value="Sanjayy datt" />
+    <bean class="com.example.springcore.app4.TeacherModel" name="teacherInfo" init-method="init"
+          destroy-method="destroy">
+        <property name="teacherName" value="Sanjayy datt"/>
     </bean>
 
+    <bean class="com.example.springcore.app4.Somosa" name="somosaInfo" init-method="afterPropertiesSet" destroy-method="destroy">
+        <property name="perKgPrice" value="4500"/>
+    </bean>
 
 </beans>
