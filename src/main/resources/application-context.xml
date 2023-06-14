@@ -78,5 +78,20 @@ http://www.springframework.org/schema/p ">
         <property name="banana" ref="bClass"/>
     </bean>
 
+<!--    this is constructor injection-->
+
+    <bean class="com.example.springcore.app3.FruiteSeller" name="sellerInfo">
+        <constructor-arg value="Sanjib Akram"/>
+        <constructor-arg value="4286341"/>
+
+    </bean>
+
+
+<!--    this is bean life-cycle-->
+
+    <bean class="com.example.springcore.app4.TeacherModel" name="teacherInfo" init-method="init" destroy-method="destroy">
+        <property name="teacherName" value="Sanjayy datt" />
+    </bean>
+
 
 </beans>
