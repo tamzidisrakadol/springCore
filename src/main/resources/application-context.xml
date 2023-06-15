@@ -99,4 +99,16 @@ http://www.springframework.org/schema/p ">
         <property name="perKgPrice" value="4500"/>
     </bean>
 
+
+<!--    this is auto-wiring example-->
+
+    <bean class="com.example.springcore.app5.PartsModel" name="partsModel">
+        <property name="partsType" value="solid"/>
+        <property name="partsName" value="plug"/>
+    </bean>
+
+    <bean class="com.example.springcore.app5.ShopkeeperModel" name="shopkeeperInfo" autowire="byName">
+        <property name="shopKeeperName" value="Suraj"/>
+    </bean>
+
 </beans>
