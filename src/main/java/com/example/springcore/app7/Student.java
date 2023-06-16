@@ -3,6 +3,8 @@ package com.example.springcore.app7;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class Student {
 
@@ -11,6 +13,16 @@ public class Student {
 
     @Value("Noida Head quarter")
     String Address;
+    @Value("#{cityListInfo}")
+    List<String> cityList;
+
+    public List<String> getCityList() {
+        return cityList;
+    }
+
+    public void setCityList(List<String> cityList) {
+        this.cityList = cityList;
+    }
 
     public String getName() {
         return name;
@@ -33,6 +45,7 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", Address='" + Address + '\'' +
+                ", cityList=" + cityList +
                 '}';
     }
 }
