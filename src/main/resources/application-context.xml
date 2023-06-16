@@ -143,4 +143,7 @@
     </bean>
 
 
+<!--    this is Stereotype Annotations-->
+    <context:component-scan base-package="com.example.springcore.app7"/>
+
 </beans>
